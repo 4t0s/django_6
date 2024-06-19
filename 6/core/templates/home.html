@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is home page</h1>
+    <table>
+        <thead>
+            <th>name</th>
+            <th>creation year</th>
+            <th>sport</th>
+            <th>coach</th>
+            <th>owner</th>
+        </thead>
+        <tbody>
+            {% for team, id in teams, id %}
+            <tr>
+                <td>{{ team.name }} {{id}}</td>
+                <td>{{ team.creation_year }} {{id}}</td>
+                <td>{{ team.sport }} {{id}}</td>
+                <td>{{ team.coach }} {{id}}</td>
+                <td>{{ team.owner }} {{id}}</td>
+            </tr>
+            {%  endfor %}
+        </tbody>
+        {% for d in dz %}
+            <p>{{d.test_list}}</p>
+        {% endfor %}
+    </table>
+</body>
+</html>
